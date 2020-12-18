@@ -62,7 +62,7 @@ func writeMessages() {
 		Topic:   config.Config.GetString("topic"),
 		Balancer: &kafka.LeastBytes{},
 	}
-	for i := 0;; i++ {
+	for {
 		// TODO: Handle JSON marshalling error
 		message, _ := json.Marshal(
 			Message {
@@ -90,7 +90,7 @@ func readMessages() {
 		MinBytes:  10, // 10B
 		MaxBytes:  10e6, // 10MB
 	})
-	for i := 0;; i++ {
+	for {
 		// Read a message from the stream and unmarshal it back to a Message
 		var message Message
 		b, err := r.ReadMessage(context.Background())
