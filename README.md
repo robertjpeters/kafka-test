@@ -5,16 +5,16 @@ Mostly taken from: https://github.com/segmentio/kafka-go
 
 Run with: ```docker-compose up```
 
-##Structure
+## Structure
 
 One executable is used to run both the producer and consumer via CLI arguments. Each executable is run within its own container.
 
-###Producer
+### Producer
 ```./go_build_linux_linx producer```
 
-###Consumer
+### Consumer
 ```./go_build_linux_linx consumer```
 
-##TODO
+## TODO
 - Better error handling
 - Better godoc
