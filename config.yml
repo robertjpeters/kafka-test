@@ -1,0 +1,4 @@
+address: localhost:9092
+topic: celcius-readings
+partition: 0
+attempts: 10
